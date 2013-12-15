@@ -427,7 +427,14 @@ cp -R spanish_formal_honorifics_1_0_6/spanish_*/* ./
 rm -rf spanish_formal_honorifics_1_0_6
 fi
 
-
+read -e -p "want to install additional Swedish (Español Usted) language (y/n)? " Swedish
+if [ "$Swedish" = "y" ] || [ "$Swedish" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_94846-sid_466897cf485fb7361c4df2fa651caecd
+unzip -u id_94846-sid_466897cf485fb7361c4df2fa651caecd
+rm -f id_94846-sid_466897cf485fb7361c4df2fa651caecd
+cp -R svenska_1_4_8/* ./
+rm -rf svenska_1_4_8
+fi
 
 
 
