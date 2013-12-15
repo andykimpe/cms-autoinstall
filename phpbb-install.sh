@@ -280,6 +280,14 @@ cp -R kurdish_1_0_5/* ./
 rm -rf kurdish_1_0_5
 fi
 
+read -e -p "want to install additional Lithuanian (Lietuvių) language (y/n)? " Lithuanian
+if [ "$Lithuanian" = "y" ] || [ "$Lithuanian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_94446
+unzip -u id_94446
+rm -f id_94446
+cp -R lithuanian_2013_10_20/* ./
+rm -rf lithuanian_2013_10_20
+fi
 
 
 
