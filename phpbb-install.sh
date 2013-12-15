@@ -290,6 +290,16 @@ rm -rf lithuanian_2013_10_20
 fi
 
 
+read -e -p "want to install additional Macedonian (македонски јазик) language (y/n)? " Macedonian
+if [ "$Macedonian" = "y" ] || [ "$Macedonian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_83006
+unzip -u id_83006
+rm -f id_83006
+cp -R macedonian_1_0_1/* ./
+rm -rf macedonian_1_0_1
+fi
+
+
 
 else
 echo "apache and php is not installed on your server thank you to install and restart the script"
