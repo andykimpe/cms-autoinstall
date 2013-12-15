@@ -253,7 +253,7 @@ cp -R indonesian_1_0_1/* ./
 rm -rf indonesian_1_0_1
 fi
 
-read -e -p "want to install additional Italian (Bahasa Indonesia) language (y/n)? " Italian
+read -e -p "want to install additional Italian (Italiano) language (y/n)? " Italian
 if [ "$Italian" = "y" ] || [ "$Italian" = "Y" ] ; then
 wget https://www.phpbb.com/customise/db/download/id_91861-sid_89f63e5c30e659b42f810054b6886a62
 unzip -u id_91861-sid_89f63e5c30e659b42f810054b6886a62
@@ -262,7 +262,7 @@ cp -R italian_1_2_2/* ./
 rm -rf italian_1_2_2
 fi
 
-read -e -p "want to install additional Japanese (Bahasa Indonesia) language (y/n)? " Japanese
+read -e -p "want to install additional Japanese (日本語) language (y/n)? " Japanese
 if [ "$Japanese" = "y" ] || [ "$Japanese" = "Y" ] ; then
 wget https://www.phpbb.com/customise/db/download/id_92251-sid_92d17f55e0b3661ed520877ada517b21
 unzip -u id_92251-sid_92d17f55e0b3661ed520877ada517b21
