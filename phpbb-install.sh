@@ -299,6 +299,15 @@ cp -R macedonian_1_0_1/* ./
 rm -rf macedonian_1_0_1
 fi
 
+read -e -p "want to install additional Mandarin Chinese Simplified (简体中文) language (y/n)? " Mandarin_Chinese_Simplified
+if [ "$Mandarin_Chinese_Simplified" = "y" ] || [ "$Mandarin_Chinese_Simplified" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_91456
+unzip -u id_91456
+rm -f id_id_91456
+cp -R mandarin_chinese_simplified_script_1_0_3/mandarin_chinese*/* ./
+rm -rf mandarin_chinese_simplified_script_1_0_3
+fi
+
 
 
 else
