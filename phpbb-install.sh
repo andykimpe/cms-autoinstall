@@ -445,7 +445,7 @@ cp -R thai_1_0_9/* ./
 rm -rf thai_1_0_9
 fi
 
-read -e -p "want to install additional Turkish (Türkçe) language (y/n)? " Thai
+read -e -p "want to install additional Turkish (Türkçe) language (y/n)? " Turkish
 if [ "$Turkish" = "y" ] || [ "$Turkish" = "Y" ] ; then
 wget https://www.phpbb.com/customise/db/download/id_91371
 unzip -u id_91371
@@ -454,7 +454,14 @@ cp -R turkish_1_0_6/* ./
 rm -rf turkish_1_0_6
 fi
 
-
+read -e -p "want to install additional Ukrainian (Українська) language (y/n)? " Ukrainian
+if [ "$Ukrainian" = "y" ] || [ "$Ukrainian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_92276
+unzip -u id_92276
+rm -f id_92276
+cp -R ukrainian_1_0_9/* ./
+rm -rf ukrainian_1_0_9
+fi
 
 
 
