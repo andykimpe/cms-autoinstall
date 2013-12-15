@@ -463,13 +463,13 @@ cp -R ukrainian_1_0_9/* ./
 rm -rf ukrainian_1_0_9
 fi
 
-read -e -p "want to install additional Urdu (اردو) language (y/n)? " Ukrainian
-if [ "$Ukrainian" = "y" ] || [ "$Ukrainian" = "Y" ] ; then
-wget https://www.phpbb.com/customise/db/download/id_92276
-unzip -u id_92276
-rm -f id_92276
-cp -R ukrainian_1_0_9/* ./
-rm -rf ukrainian_1_0_9
+read -e -p "want to install additional Urdu (اردو) language (y/n)? " Urdu
+if [ "$Urdu" = "y" ] || [ "$Urdu" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_81743
+unzip -u id_81743
+rm -f id_81743
+cp -R urdu_1_0_1/* ./
+rm -rf urdu_1_0_1
 fi
 
 
