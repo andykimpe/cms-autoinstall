@@ -319,6 +319,36 @@ cp -R mandarin_chinese_traditional_script_1_0_5/mandarin_chinese*/* ./
 rm -rf mandarin_chinese_traditional_script_1_0_5
 fi
 
+read -e -p "want to install additional Mandarin Mexican Spanish (Español Mexicano) language (y/n)? " Mexican_Spanish
+if [ "$Mexican_Spanish" = "y" ] || [ "$Mexican_Spanish" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_92146
+unzip -u id_92146
+rm -f id_92146
+cp -R mexican_spanish_casual_honorifics_1_0_5/mexican_spanish_1_0_5/* ./
+rm -rf mexican_spanish_casual_honorifics_1_0_5
+fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
