@@ -432,11 +432,18 @@ if [ "$Swedish" = "y" ] || [ "$Swedish" = "Y" ] ; then
 wget https://www.phpbb.com/customise/db/download/id_94846-sid_466897cf485fb7361c4df2fa651caecd
 unzip -u id_94846-sid_466897cf485fb7361c4df2fa651caecd
 rm -f id_94846-sid_466897cf485fb7361c4df2fa651caecd
-cp -R svenska_1_4_8/* ./
+cp -R svenska_1_4_8/swedish_1_4_8/* ./
 rm -rf svenska_1_4_8
 fi
 
-
+read -e -p "want to install additional Thai (ภาษาไทย) language (y/n)? " Thai
+if [ "$Thai" = "y" ] || [ "$Thai" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_92706-sid_44ea5d7f2a312e9fb9f1d569d31c7ed8
+unzip -u id_92706-sid_44ea5d7f2a312e9fb9f1d569d31c7ed8
+rm -f id_92706-sid_44ea5d7f2a312e9fb9f1d569d31c7ed8
+cp -R thai_1_0_9/* ./
+rm -rf thai_1_0_9
+fi
 
 
 
