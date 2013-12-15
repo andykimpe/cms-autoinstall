@@ -1,30 +1,30 @@
 #!/bin/bash
 if [ -d "/etc/httpd" ] || [ -d "/etc/apache2" ] && [ -f /etc/php.ini ] || [ -f /etc/php5/cli/php.ini ] || [ -f /etc/php5/apache2/php.ini ] || [ -f /etc/php5/cli/php.ini ] || [ -f /etc/php5/apache2/php.ini ] ; then
-#if [ -d "/etc/zpanel" ] ; then
-#zpaneldomaine=$(setso --show zpanel_domain)
-#echo "We detected that your server is using ZPanel"
-#echo "we recommend using Zantasticot X to install phpbb"
-#red -e -p "want to install X Zantasticot now (y/n)?" zantasticotx
-#case $zantasticotx in
-# [Yy]* ) break;;
-# [Nn]* ) exit;
-# esac
-#done
-#if [ -d /etc/zpanel/panel/modules/zantasticox ] ; then
-#echo "Zantastico X already installed on your server"
-#echo "for finish install of phpbb plesase use Zantasticot X"
-#echo "on url http://$zpaneldomaine/?module=zantasticox"
-#exit
-#fi
-#zppy repo add modules.zpanelcp.com/repo
-#zppy update
-#zppy install zantasticox
-#read -e -p "Please enter your root password MySQL for finish install of Zantasticot X" mysql
-#mysql -u root -p$mysql -e "UPDATE zpanel_core.x_modules SET mo_enabled_en = 'true' WHERE mo_folder_vc = 'zantasticox'";
-#echo "for finish install of phpbb plesase use Zantasticot X"
-#echo "on url http://$zpaneldomaine/?module=zantasticox"
-#exit
-#fi
+if [ -d "/etc/zpanel" ] ; then
+zpaneldomain=$(setso --show zpanel_domain)
+echo "We detected that your server is using ZPanel"
+echo "we recommend using Zantasticot X to install phpbb"
+red -e -p "want to install X Zantasticot now (y/n)?" zantasticotx
+case $zantasticotx in
+ [Yy]* ) break;;
+ [Nn]* ) exit;
+ esac
+done
+if [ -d /etc/zpanel/panel/modules/zantasticox ] ; then
+echo "Zantastico X already installed on your server"
+echo "for finish install of phpbb plesase use Zantasticot X"
+echo "on url http://$zpaneldomain/?module=zantasticox"
+exit
+fi
+zppy repo add modules.zpanelcp.com/repo
+zppy update
+zppy install zantasticox
+read -e -p "Please enter your root password MySQL for finish install of Zantasticot X" mysql
+mysql -u root -p$mysql -e "UPDATE zpanel_core.x_modules SET mo_enabled_en = 'true' WHERE mo_folder_vc = 'zantasticox'";
+echo "for finish install of phpbb plesase use Zantasticot X"
+echo "on url http://$zpaneldomain/?module=zantasticox"
+exit
+fi
 
 read -e -p "enter the full directory to install phpbb " directory
 rm -rf $directory
@@ -463,7 +463,14 @@ cp -R ukrainian_1_0_9/* ./
 rm -rf ukrainian_1_0_9
 fi
 
-
+read -e -p "want to install additional Urdu (اردو) language (y/n)? " Ukrainian
+if [ "$Ukrainian" = "y" ] || [ "$Ukrainian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_92276
+unzip -u id_92276
+rm -f id_92276
+cp -R ukrainian_1_0_9/* ./
+rm -rf ukrainian_1_0_9
+fi
 
 
 
