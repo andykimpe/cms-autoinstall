@@ -81,7 +81,7 @@ cp -R argentinian_spanish_formal_honorifics_1_0_2/argentinian_spanish_1_0_2/* ./
 rm -rf argentinian_spanish_formal_honorifics_1_0_2
 fi
 
-read -e -p "want to install additional Basque (Español Argentino) language (y/n)? " Basque
+read -e -p "want to install additional Basque (Euskara) language (y/n)? " Basque
 if [ "$Basque" = "y" ] || [ "$Basque" = "Y" ] ; then
 wget https://www.phpbb.com/customise/db/download/id_84782
 unzip -u id_84782
