@@ -472,7 +472,14 @@ cp -R urdu_1_0_1/* ./
 rm -rf urdu_1_0_1
 fi
 
-
+read -e -p "want to install additional Vietnamese (Tiếng Việt) language (y/n)? " Vietnamese
+if [ "$Vietnamese" = "y" ] || [ "$Vietnamese" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_84900
+unzip -u id_84900
+rm -f id_84900
+cp -R vietnamese_1_3_1/* ./
+rm -rf vietnamese_1_3_1
+fi
 
 
 
