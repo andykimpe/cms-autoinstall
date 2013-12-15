@@ -445,6 +445,18 @@ cp -R thai_1_0_9/* ./
 rm -rf thai_1_0_9
 fi
 
+read -e -p "want to install additional Turkish (Türkçe) language (y/n)? " Thai
+if [ "$Turkish" = "y" ] || [ "$Turkish" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_91371
+unzip -u id_91371
+rm -f id_91371
+cp -R turkish_1_0_6/* ./
+rm -rf turkish_1_0_6
+fi
+
+
+
+
 
 
 
