@@ -382,7 +382,14 @@ cp -R serbian_cyrillic_script_3_0_12/serbian_*/* ./
 rm -rf serbian_cyrillic_script_3_0_12
 fi
 
-
+read -e -p "want to install additional Serbian Latin (Srpski Latinica) language (y/n)? " Serbian_Latin
+if [ "$Serbian_Latin" = "y" ] || [ "$Serbian_Latin" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_84606-sid_073df919f91add3e6881720d784f424d
+unzip -u id_84606-sid_073df919f91add3e6881720d784f424d
+rm -f id_84606-sid_073df919f91add3e6881720d784f424d
+cp -R serbian_latin_script_3_0_11/* ./
+rm -rf serbian_latin_script_3_0_11
+fi
 
 
 
