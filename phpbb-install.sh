@@ -418,6 +418,21 @@ cp -R spanish_casual_honorifics_1_0_6/spanish_*/* ./
 rm -rf spanish_casual_honorifics_1_0_6
 fi
 
+read -e -p "want to install additional Spanish Formal Honorifics (Español Usted) language (y/n)? " Spanish_Formal
+if [ "$Spanish_Formal" = "y" ] || [ "$Spanish_Formal" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_92601-sid_94c4839135d8d8cb4e1a9e6df904f29c
+unzip -u id_92601-sid_94c4839135d8d8cb4e1a9e6df904f29c
+rm -f id_92601-sid_94c4839135d8d8cb4e1a9e6df904f29c
+cp -R spanish_formal_honorifics_1_0_6/spanish_*/* ./
+rm -rf spanish_formal_honorifics_1_0_6
+fi
+
+
+
+
+
+
+
 
 
 
