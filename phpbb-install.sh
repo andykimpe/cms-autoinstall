@@ -346,9 +346,14 @@ cp -R polish_r210/* ./
 rm -rf polish_r210
 fi
 
-
-
-
+read -e -p "want to install additional Portuguese (Português) language (y/n)? " Portuguese
+if [ "$Portuguese" = "y" ] || [ "$Portuguese" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_91501-sid_fa44101f2b16ccf1e77b33415cdf1501
+unzip -u id_91501-sid_fa44101f2b16ccf1e77b33415cdf1501
+rm -f id_91501-sid_fa44101f2b16ccf1e77b33415cdf1501
+cp -R portuguese_1_0_6/* ./
+rm -rf portuguese_1_0_6
+fi
 
 
 
