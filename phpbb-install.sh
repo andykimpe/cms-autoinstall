@@ -235,7 +235,14 @@ cp -R hebrew_3_0_12/* ./
 rm -rf hebrew_3_0_12
 fi
 
-
+read -e -p "want to install additional Hungarian (Magyar) language (y/n)? " Hungarian
+if [ "$Hungarian" = "y" ] || [ "$Hungarian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_82916-sid_e52a72d233d0bbd7e78521c288b702d0
+unzip -u id_82916-sid_e52a72d233d0bbd7e78521c288b702d0
+rm -f id_82916-sid_e52a72d233d0bbd7e78521c288b702d0
+cp -R hungarian_233/* ./
+rm -rf hungarian_233
+fi
 
 
 
