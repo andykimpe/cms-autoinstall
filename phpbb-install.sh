@@ -244,6 +244,29 @@ cp -R hungarian_233/* ./
 rm -rf hungarian_233
 fi
 
+read -e -p "want to install additional Indonesian (Bahasa Indonesia) language (y/n)? " Indonesian
+if [ "$Indonesian" = "y" ] || [ "$Indonesian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_81607-sid_d2186b087731f1eaa1406bf534181643
+unzip -u id_81607-sid_d2186b087731f1eaa1406bf534181643
+rm -f id_81607-sid_d2186b087731f1eaa1406bf534181643
+cp -R indonesian_1_0_1/* ./
+rm -rf indonesian_1_0_1
+fi
+
+read -e -p "want to install additional Italian (Bahasa Indonesia) language (y/n)? " Italian
+if [ "$Italian" = "y" ] || [ "$Italian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_91861-sid_89f63e5c30e659b42f810054b6886a62
+unzip -u id_91861-sid_89f63e5c30e659b42f810054b6886a62
+rm -f id_91861-sid_89f63e5c30e659b42f810054b6886a62
+cp -R italian_1_2_2/* ./
+rm -rf italian_1_2_2
+fi
+
+
+
+
+
+
 
 
 else
