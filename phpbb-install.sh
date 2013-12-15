@@ -373,7 +373,14 @@ cp -R russian_1_0_11/* ./
 rm -rf russian_1_0_11
 fi
 
-
+read -e -p "want to install additional Serbian Cyrillic (Српски) language (y/n)? " Serbian_Cyrillic
+if [ "$Serbian_Cyrillic" = "y" ] || [ "$Serbian_Cyrillic" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_92921-sid_e74a8dc46463d7f3fafeb1ade076fec0
+unzip -u id_92921-sid_e74a8dc46463d7f3fafeb1ade076fec0
+rm -f id_92921-sid_e74a8dc46463d7f3fafeb1ade076fec0
+cp -R serbian_cyrillic_script_3_0_12/serbian_*/* ./
+rm -rf serbian_cyrillic_script_3_0_12
+fi
 
 
 
