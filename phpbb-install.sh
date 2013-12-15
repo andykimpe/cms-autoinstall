@@ -337,7 +337,14 @@ cp -R persian_1_5_1/* ./
 rm -rf persian_1_5_1
 fi
 
-
+read -e -p "want to install additional Polish (Polski) language (y/n)? " Polish
+if [ "$Polish" = "y" ] || [ "$Polish" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_84758
+unzip -u id_84758
+rm -f id_84758
+cp -R polish_r210/* ./
+rm -rf polish_r210
+fi
 
 
 
