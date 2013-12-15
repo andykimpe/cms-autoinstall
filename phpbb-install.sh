@@ -271,7 +271,14 @@ cp -R japanese_1_0_5/* ./
 rm -rf japanese_1_0_5
 fi
 
-
+read -e -p "want to install additional Kurdish (کوردی) language (y/n)? " Kurdish
+if [ "$Kurdish" = "y" ] || [ "$Kurdish" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_84789
+unzip -u id_84789
+rm -f id_84789
+cp -R kurdish_1_0_5/* ./
+rm -rf kurdish_1_0_5
+fi
 
 
 
