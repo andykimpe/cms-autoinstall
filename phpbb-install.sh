@@ -391,7 +391,14 @@ cp -R serbian_latin_script_3_0_11/* ./
 rm -rf serbian_latin_script_3_0_11
 fi
 
-
+read -e -p "want to install additional Slovak (Slovenčina) language (y/n)? " Slovak
+if [ "$Slovak" = "y" ] || [ "$Slovak" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_93561
+unzip -u id_93561
+rm -f id_93561
+cp -R slovak_3_0_12_2/* ./
+rm -rf slovak_3_0_12_2
+fi
 
 
 
