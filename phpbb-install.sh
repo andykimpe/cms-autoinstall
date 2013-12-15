@@ -400,7 +400,14 @@ cp -R slovak_3_0_12_2/* ./
 rm -rf slovak_3_0_12_2
 fi
 
-
+read -e -p "want to install additional Slovenian (Slovenščina) language (y/n)? " Slovenian
+if [ "$Slovenian" = "y" ] || [ "$Slovenian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_91736-sid_3ba16b2eab910ee3911daa093e204fe5
+unzip -u id_91736-sid_3ba16b2eab910ee3911daa093e204fe5
+rm -f id_91736-sid_3ba16b2eab910ee3911daa093e204fe5
+cp -R slovenian_1_3_0/* ./
+rm -rf slovenian_1_3_0
+fi
 
 
 
