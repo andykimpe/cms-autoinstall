@@ -364,7 +364,14 @@ cp -R romanian_1_0_5/* ./
 rm -rf romanian_1_0_5
 fi
 
-
+read -e -p "want to install additional Russian (Русский) language (y/n)? " Russian
+if [ "$Russian" = "y" ] || [ "$Russian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_91291-sid_2f1105bcdc80fe1235ffece076b9edd2
+unzip -u id_91291-sid_2f1105bcdc80fe1235ffece076b9edd2
+rm -f id_91291-sid_2f1105bcdc80fe1235ffece076b9edd2
+cp -R russian_1_0_11/* ./
+rm -rf russian_1_0_11
+fi
 
 
 
