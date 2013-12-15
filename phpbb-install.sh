@@ -355,7 +355,14 @@ cp -R portuguese_1_0_6/* ./
 rm -rf portuguese_1_0_6
 fi
 
-
+read -e -p "want to install additional Romanian (Română) language (y/n)? " Romanian
+if [ "$Romanian" = "y" ] || [ "$Romanian" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_84641-sid_49a52b2c944ade82a404f0e3f02cfc38
+unzip -u id_84641-sid_49a52b2c944ade82a404f0e3f02cfc38
+rm -f id_84641-sid_49a52b2c944ade82a404f0e3f02cfc38
+cp -R romanian_1_0_5/* ./
+rm -rf romanian_1_0_5
+fi
 
 
 
