@@ -409,7 +409,14 @@ cp -R slovenian_1_3_0/* ./
 rm -rf slovenian_1_3_0
 fi
 
-
+read -e -p "want to install additional Spanish Casual Honorifics (Español Tú) language (y/n)? " Spanish_Casual
+if [ "$Spanish_Casual" = "y" ] || [ "$Spanish_Casual" = "Y" ] ; then
+wget https://www.phpbb.com/customise/db/download/id_92696-sid_a3b2a72f9b2800d65cbddf442649a0e3
+unzip -u id_92696-sid_a3b2a72f9b2800d65cbddf442649a0e3
+rm -f id_92696-sid_a3b2a72f9b2800d65cbddf442649a0e3
+cp -R spanish_casual_honorifics_1_0_6/spanish_*/* ./
+rm -rf spanish_casual_honorifics_1_0_6
+fi
 
 
 
